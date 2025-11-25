@@ -1,0 +1,26 @@
+# Model checkpoints
+models/*.ckpt
+*.ckpt
+*.tar
+*.mag
+
+# Audio files
+output/**/*.wav
+data/**/*.wav
+*.wav
+*.mid
+
+# Python environment
+magenta_env/
+venv/
+magenta/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
