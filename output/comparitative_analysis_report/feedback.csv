@@ -1,0 +1,11 @@
+timestamp,model,melody_rating,accompaniment_rating,overall_rating
+15-11-2025,PerformanceRNN,4,3,4
+16-11-2025,MusicVAE,5,4,5
+15-11-2025,PerformanceRNN,3,3,3
+20-11-2025,MusicVAE,4,5,5
+22-11-2025,PerformanceRNN,4,4,4
+23-11-2025,PerformanceRNN,3,4,3
+23-11-2025,MusicVAE,3,4,4
+24-11-2025 00:00,PerformanceRNN,3,3,3
+24-11-2025 19:55,MusicVAE,3,4,4
+24-11-2025 19:55,CustomModel,,,
