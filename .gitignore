@@ -19,7 +19,8 @@ output/
 models/
 node_modules/
 venv37/
-
+voice2musicbackend/Phase1_Final/*.exe
+voice2musicbackend/Phase1_Final/*.pt
 
 # Python cache
 __pycache__/
