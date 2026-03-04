@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Music-themed gradient background animation */
+body {
+  background: linear-gradient(-45deg, #7f00ff, #e100ff, #00c6ff, #0072ff);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+
+/* Keyframes drive diagonal motion and subtle vertical wobble */
+@keyframes waveMoveSlow {
+  0%   { transform: translate3d(-6%, -4%, 0) rotate(-18deg) scale(1); }
+  50%  { transform: translate3d(6%, 4%, 0) rotate(-18deg) scale(1.02); }
+  100% { transform: translate3d(-6%, -4%, 0) rotate(-18deg) scale(1); }
+}
+
+@keyframes waveMoveFast {
+  0%   { transform: translate3d(-12%, -8%, 0) rotate(-18deg) scale(1); }
+  50%  { transform: translate3d(12%, 8%, 0) rotate(-18deg) scale(1.02); }
+  100% { transform: translate3d(-12%, -8%, 0) rotate(-18deg) scale(1); }
+}
+
+/* Gold shimmer/pulse for highlight lines */
+@keyframes goldPulse {
+  0%   { stroke-opacity: 0.6; transform: translateY(0px); }
+  50%  { stroke-opacity: 1; transform: translateY(-6px) scaleY(1.02); }
+  100% { stroke-opacity: 0.6; transform: translateY(0px); }
+}
+
+/* Deep wave breathing */
+@keyframes deepWaveShift {
+  0%   { stroke-opacity: 0.20; transform: translateY(0px) scale(1); }
+  50%  { stroke-opacity: 0.28; transform: translateY(-10px) scale(1.01); }
+  100% { stroke-opacity: 0.20; transform: translateY(0px) scale(1); }
+}
+
+/* Make sure waves stay dim behind UI */
+.wave-svg path { vector-effect: non-scaling-stroke; }
+
+/* reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .waveGroup--slow,
+  .waveGroup--fast,
+  .wave--gold,
+  .wave--deep,
+  .wave--deep2 {
+    animation: none !important;
+  }
+}

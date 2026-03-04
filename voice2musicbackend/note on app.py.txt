@@ -1,0 +1,16 @@
+ we need ffmpeg to conert mp3.wav 
+
+ steps :
+You can download FFmpeg for Windows easily. Here's a step-by-step:
+
+Step 1: Go to FFmpeg official site
+
+URL: https://ffmpeg.org/download.html
+
+Click Windows → You'll be redirected to the Windows builds by BtbN or Gyan.dev.
+
+Step 2: Download a build
+
+On Gyan.dev, choose Release builds → ffmpeg-release-essentials.zip (smallest, stable build).
+
+On BtbN, choose ffmpeg-release-full.7z or zip.
