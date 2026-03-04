@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voice2Music Editor</title>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <!-- AudioMass scripts -->
+  <script src="audiomass.js"></script>
+  <script src="audiomass-worker.js"></script>
+
+  <!-- Auto-load audio from localStorage -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const base64Audio = localStorage.getItem("audiomass_file");
+      if (base64Audio) {
+        const byteString = atob(base64Audio.split(',')[1]);
+        const mime = base64Audio.match(/data:(.*);base64,/)[1];
+        const ab = new ArrayBuffer(byteString.length);
+        const ia = new Uint8Array(ab);
+        for (let i = 0; i < byteString.length; i++) ia[i] = byteString.charCodeAt(i);
+        const blob = new Blob([ab], { type: mime });
+        const file = new File([blob], "audio.mp3", { type: mime });
+        // AudioMass function
+        if (typeof openFile === "function") openFile(file);
+        localStorage.removeItem("audiomass_file");
+      }
+    });
+  </script>
+</body>
+</html>
