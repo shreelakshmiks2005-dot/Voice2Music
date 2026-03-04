@@ -14,6 +14,10 @@ data/**/*.wav
 magenta_env/
 venv/
 magenta/
+data/
+output/
+models/
+node_modules/
 
 # Python cache
 __pycache__/
