@@ -18,6 +18,8 @@ data/
 output/
 models/
 node_modules/
+venv37/
+
 
 # Python cache
 __pycache__/
